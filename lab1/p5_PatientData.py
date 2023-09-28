@@ -15,7 +15,7 @@ import pandas as pd
 
 
 # Part A
-results = pd.read_csv('PatientData.csv')
+results = pd.read_csv('lab1/PatientData.csv')
 
 print("Number of patients: ", str(len(results)))
 num_features = results.shape[1]-1
@@ -45,7 +45,7 @@ for index, row in results.iterrows():
             results.at[index, column] = str(columnAvs[i])
         i+=1
 
-modified_csv = 'modifiedPatientData.csv'
+modified_csv = 'lab1/modifiedPatientData.csv'
 results.to_csv(modified_csv, index=False)
 
 
